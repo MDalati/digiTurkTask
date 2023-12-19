@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - MainInteractorLogic
 protocol MainInteractorLogic {
     
     func initialize(request: MainModels.Initialize.Request)
@@ -14,10 +15,12 @@ protocol MainInteractorLogic {
     func finalize(request: MainModels.Finilize.Request)
 }
 
+// MARK: - MainDatasource
 protocol MainDatasource {
     
 }
 
+// MARK: - MainInteractor
 class MainInteractor: MainDatasource {
     
     // MARK: VIP
@@ -36,7 +39,6 @@ class MainInteractor: MainDatasource {
 }
 
 // MARK: - MainInteractorLogic
-
 extension MainInteractor: MainInteractorLogic {
     
     func initialize(request: MainModels.Initialize.Request) {

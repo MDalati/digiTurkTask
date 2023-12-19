@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProgramResponse: Decodable {
+struct ProgramsListResponse: Decodable {
     
     var page: Int?
     var results: [ProgramResult]?

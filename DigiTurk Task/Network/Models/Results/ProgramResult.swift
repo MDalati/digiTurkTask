@@ -9,9 +9,11 @@ import Foundation
 
 struct ProgramResult: Decodable {
     
+    private let imageBaseUrl = "http://image.tmdb.org/t/p/w185"
+    
     var adult: Bool?
     var backdropPath: String?
-    var genreIds: Int?
+    var genreIds: [Int]?
     var id: Int?
     var originalLanguage: String?
     var originalTitle: String?
@@ -23,6 +25,13 @@ struct ProgramResult: Decodable {
     var video: Bool
     var voteAverage: Double?
     var voteCount: Int?
+    
+    var coverImageURL: String? {
+        guard let posterPath = posterPath else {
+            return nil
+        }
+        return "\(imageBaseUrl)\(posterPath)"
+    }
     
     enum CodingKeys: String, CodingKey {
         

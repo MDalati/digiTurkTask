@@ -29,6 +29,13 @@ extension MainPresenter: MainPresenterLogic {
     
     func presentInitializeResult(response: MainModels.Initialize.Response) {
         
+        let genrePages: [MainModels.GenrePageModel] = response.genresList.compactMap {
+            return MainModels.GenrePageModel(
+                viewController: GenreDetailsConfigurator.createScene(for: $0),
+                title: $0.name
+            )
+        }
+        view.displayInitializeResult(viewModel: MainModels.Initialize.ViewModel(pages: genrePages))
     }
     
     func presentReloadResult(response: MainModels.Reload.Response) {

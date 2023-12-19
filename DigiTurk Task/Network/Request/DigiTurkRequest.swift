@@ -18,7 +18,7 @@ enum DigiTurkAPI {
         case .genre(_):
             return "genre/movie/list\(queryParams)"
         case .programs(_):
-            return "discover/movie"
+            return "discover/movie\(queryParams)"
         }
     }
     
@@ -44,7 +44,7 @@ enum DigiTurkAPI {
                 "include_adult": request.includeAdult,
                 "include_video": request.includeVideo,
                 "page": request.page,
-                "withGenres": request.withGenres
+                "with_genres": request.withGenres
             ]
         }
     }
@@ -73,19 +73,18 @@ class DigiTurkRequest {
           print(description)
         }
         .response { response in
-            DispatchQueue.main.async {
-                guard response.error == nil, let data = response.data else {
-                    onError(response.error)
-                    return
-                }
-                let decoder = JSONDecoder()
-                do {
-                    let response = try decoder.decode(T.self, from: data)
-                    onSuccess(response)
-                } catch {
-                    onError(nil)
-                }
+            guard response.error == nil, let data = response.data else {
+                onError(response.error)
+                return
             }
+            let decoder = JSONDecoder()
+            do {
+                let response = try decoder.decode(T.self, from: data)
+                onSuccess(response)
+            } catch {
+                onError(error)
+            }
+            
         }
     }
 }
