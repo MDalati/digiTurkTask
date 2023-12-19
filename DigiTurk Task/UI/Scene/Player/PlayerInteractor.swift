@@ -14,13 +14,13 @@ protocol PlayerInteractorLogic {
 
 protocol PlayerDatasource {
     
-    var itemUrl: String { get }
+    var itemUrl: URL? { get }
 }
 
 class PlayerInteractor: PlayerDatasource {
     
     // MARK: Datasource
-    let itemUrl: String = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    let itemUrl = URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8")
     
     // MARK: VIP
     var presenter: PlayerPresenterLogic
