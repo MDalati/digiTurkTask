@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29022B31ACD3001320E9 /* AppDelegate.swift */; };
+		CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */; };
+		CBFD29072B31ACD3001320E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29062B31ACD3001320E9 /* MainViewController.swift */; };
+		CBFD290A2B31ACD3001320E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFD29082B31ACD3001320E9 /* Main.storyboard */; };
+		CBFD290C2B31ACD3001320E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFD290B2B31ACD3001320E9 /* Assets.xcassets */; };
+		CBFD290F2B31ACD3001320E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFD290D2B31ACD3001320E9 /* LaunchScreen.storyboard */; };
+		CBFD291A2B31ACD3001320E9 /* DigiTurk_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29192B31ACD3001320E9 /* DigiTurk_TaskTests.swift */; };
+		CBFD29242B31ACD3001320E9 /* DigiTurk_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29232B31ACD3001320E9 /* DigiTurk_TaskUITests.swift */; };
+		CBFD29262B31ACD3001320E9 /* DigiTurk_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29252B31ACD3001320E9 /* DigiTurk_TaskUITestsLaunchTests.swift */; };
+		CBFD29392B31B00E001320E9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD29382B31B00E001320E9 /* Alamofire */; };
+		CBFD293E2B31B079001320E9 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD293D2B31B079001320E9 /* MainInteractor.swift */; };
+		CBFD29402B31B09B001320E9 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD293F2B31B09B001320E9 /* MainPresenter.swift */; };
+		CBFD29422B31B0AA001320E9 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29412B31B0AA001320E9 /* MainRouter.swift */; };
+		CBFD29442B31B0BB001320E9 /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29432B31B0BB001320E9 /* MainConfigurator.swift */; };
+		CBFD29462B31B0EE001320E9 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29452B31B0EE001320E9 /* MainModels.swift */; };
+		CBFD294A2B31B71D001320E9 /* GenreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29492B31B71D001320E9 /* GenreResult.swift */; };
+		CBFD294C2B31B7C1001320E9 /* ProgramResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD294B2B31B7C1001320E9 /* ProgramResult.swift */; };
+		CBFD29502B31B8A0001320E9 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD294F2B31B8A0001320E9 /* GenreResponse.swift */; };
+		CBFD29522B31B8CD001320E9 /* ProgramResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29512B31B8CD001320E9 /* ProgramResponse.swift */; };
+		CBFD29552B31BB19001320E9 /* GenreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29542B31BB19001320E9 /* GenreRequest.swift */; };
+		CBFD29582B31BB91001320E9 /* ProgramRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29572B31BB91001320E9 /* ProgramRequest.swift */; };
+		CBFD295B2B31BCD8001320E9 /* DigiTurkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD295A2B31BCD8001320E9 /* DigiTurkRequest.swift */; };
+		CBFD295E2B31C9D7001320E9 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD295D2B31C9D7001320E9 /* MainWorker.swift */; };
+		CBFD29612B31CCBE001320E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD29602B31CCBE001320E9 /* SnapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBFD29162B31ACD3001320E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBFD28F72B31ACD3001320E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFD28FE2B31ACD3001320E9;
+			remoteInfo = "DigiTurk Task";
+		};
+		CBFD29202B31ACD3001320E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBFD28F72B31ACD3001320E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFD28FE2B31ACD3001320E9;
+			remoteInfo = "DigiTurk Task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigiTurk Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFD29022B31ACD3001320E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CBFD29062B31ACD3001320E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CBFD29092B31ACD3001320E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBFD290B2B31ACD3001320E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBFD290E2B31ACD3001320E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBFD29102B31ACD3001320E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBFD29152B31ACD3001320E9 /* DigiTurk TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DigiTurk TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFD29192B31ACD3001320E9 /* DigiTurk_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTurk_TaskTests.swift; sourceTree = "<group>"; };
+		CBFD291F2B31ACD3001320E9 /* DigiTurk TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DigiTurk TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFD29232B31ACD3001320E9 /* DigiTurk_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTurk_TaskUITests.swift; sourceTree = "<group>"; };
+		CBFD29252B31ACD3001320E9 /* DigiTurk_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTurk_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBFD293D2B31B079001320E9 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		CBFD293F2B31B09B001320E9 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CBFD29412B31B0AA001320E9 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CBFD29432B31B0BB001320E9 /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		CBFD29452B31B0EE001320E9 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
+		CBFD29492B31B71D001320E9 /* GenreResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResult.swift; sourceTree = "<group>"; };
+		CBFD294B2B31B7C1001320E9 /* ProgramResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramResult.swift; sourceTree = "<group>"; };
+		CBFD294F2B31B8A0001320E9 /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
+		CBFD29512B31B8CD001320E9 /* ProgramResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramResponse.swift; sourceTree = "<group>"; };
+		CBFD29542B31BB19001320E9 /* GenreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRequest.swift; sourceTree = "<group>"; };
+		CBFD29572B31BB91001320E9 /* ProgramRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramRequest.swift; sourceTree = "<group>"; };
+		CBFD295A2B31BCD8001320E9 /* DigiTurkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTurkRequest.swift; sourceTree = "<group>"; };
+		CBFD295D2B31C9D7001320E9 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBFD28FC2B31ACD3001320E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFD29392B31B00E001320E9 /* Alamofire in Frameworks */,
+				CBFD29612B31CCBE001320E9 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD29122B31ACD3001320E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD291C2B31ACD3001320E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBFD28F62B31ACD3001320E9 = {
+			isa = PBXGroup;
+			children = (
+				CBFD29012B31ACD3001320E9 /* DigiTurk Task */,
+				CBFD29182B31ACD3001320E9 /* DigiTurk TaskTests */,
+				CBFD29222B31ACD3001320E9 /* DigiTurk TaskUITests */,
+				CBFD29002B31ACD3001320E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBFD29002B31ACD3001320E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */,
+				CBFD29152B31ACD3001320E9 /* DigiTurk TaskTests.xctest */,
+				CBFD291F2B31ACD3001320E9 /* DigiTurk TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBFD29012B31ACD3001320E9 /* DigiTurk Task */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD293C2B31B055001320E9 /* UI */,
+				CBFD29472B31B63D001320E9 /* Network */,
+				CBFD29022B31ACD3001320E9 /* AppDelegate.swift */,
+				CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */,
+				CBFD290B2B31ACD3001320E9 /* Assets.xcassets */,
+				CBFD290D2B31ACD3001320E9 /* LaunchScreen.storyboard */,
+				CBFD29102B31ACD3001320E9 /* Info.plist */,
+			);
+			path = "DigiTurk Task";
+			sourceTree = "<group>";
+		};
+		CBFD29182B31ACD3001320E9 /* DigiTurk TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29192B31ACD3001320E9 /* DigiTurk_TaskTests.swift */,
+			);
+			path = "DigiTurk TaskTests";
+			sourceTree = "<group>";
+		};
+		CBFD29222B31ACD3001320E9 /* DigiTurk TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29232B31ACD3001320E9 /* DigiTurk_TaskUITests.swift */,
+				CBFD29252B31ACD3001320E9 /* DigiTurk_TaskUITestsLaunchTests.swift */,
+			);
+			path = "DigiTurk TaskUITests";
+			sourceTree = "<group>";
+		};
+		CBFD293A2B31B044001320E9 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD293B2B31B04B001320E9 /* MainViewController */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		CBFD293B2B31B04B001320E9 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29452B31B0EE001320E9 /* MainModels.swift */,
+				CBFD29062B31ACD3001320E9 /* MainViewController.swift */,
+				CBFD293D2B31B079001320E9 /* MainInteractor.swift */,
+				CBFD293F2B31B09B001320E9 /* MainPresenter.swift */,
+				CBFD29412B31B0AA001320E9 /* MainRouter.swift */,
+				CBFD29432B31B0BB001320E9 /* MainConfigurator.swift */,
+				CBFD295D2B31C9D7001320E9 /* MainWorker.swift */,
+				CBFD29082B31ACD3001320E9 /* Main.storyboard */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		CBFD293C2B31B055001320E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD293A2B31B044001320E9 /* Scene */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CBFD29472B31B63D001320E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29592B31BCB5001320E9 /* Request */,
+				CBFD29482B31B64B001320E9 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CBFD29482B31B64B001320E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29532B31BAE6001320E9 /* Request */,
+				CBFD294E2B31B88C001320E9 /* Response */,
+				CBFD294D2B31B880001320E9 /* Results */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBFD294D2B31B880001320E9 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29492B31B71D001320E9 /* GenreResult.swift */,
+				CBFD294B2B31B7C1001320E9 /* ProgramResult.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		CBFD294E2B31B88C001320E9 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD294F2B31B8A0001320E9 /* GenreResponse.swift */,
+				CBFD29512B31B8CD001320E9 /* ProgramResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		CBFD29532B31BAE6001320E9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD29542B31BB19001320E9 /* GenreRequest.swift */,
+				CBFD29572B31BB91001320E9 /* ProgramRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		CBFD29592B31BCB5001320E9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				CBFD295A2B31BCD8001320E9 /* DigiTurkRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBFD28FE2B31ACD3001320E9 /* DigiTurk Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFD29292B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk Task" */;
+			buildPhases = (
+				CBFD28FB2B31ACD3001320E9 /* Sources */,
+				CBFD28FC2B31ACD3001320E9 /* Frameworks */,
+				CBFD28FD2B31ACD3001320E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DigiTurk Task";
+			packageProductDependencies = (
+				CBFD29382B31B00E001320E9 /* Alamofire */,
+				CBFD29602B31CCBE001320E9 /* SnapKit */,
+			);
+			productName = "DigiTurk Task";
+			productReference = CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBFD29142B31ACD3001320E9 /* DigiTurk TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFD292C2B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk TaskTests" */;
+			buildPhases = (
+				CBFD29112B31ACD3001320E9 /* Sources */,
+				CBFD29122B31ACD3001320E9 /* Frameworks */,
+				CBFD29132B31ACD3001320E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBFD29172B31ACD3001320E9 /* PBXTargetDependency */,
+			);
+			name = "DigiTurk TaskTests";
+			productName = "DigiTurk TaskTests";
+			productReference = CBFD29152B31ACD3001320E9 /* DigiTurk TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBFD291E2B31ACD3001320E9 /* DigiTurk TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFD292F2B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk TaskUITests" */;
+			buildPhases = (
+				CBFD291B2B31ACD3001320E9 /* Sources */,
+				CBFD291C2B31ACD3001320E9 /* Frameworks */,
+				CBFD291D2B31ACD3001320E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBFD29212B31ACD3001320E9 /* PBXTargetDependency */,
+			);
+			name = "DigiTurk TaskUITests";
+			productName = "DigiTurk TaskUITests";
+			productReference = CBFD291F2B31ACD3001320E9 /* DigiTurk TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBFD28F72B31ACD3001320E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CBFD28FE2B31ACD3001320E9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					CBFD29142B31ACD3001320E9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CBFD28FE2B31ACD3001320E9;
+					};
+					CBFD291E2B31ACD3001320E9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CBFD28FE2B31ACD3001320E9;
+					};
+				};
+			};
+			buildConfigurationList = CBFD28FA2B31ACD3001320E9 /* Build configuration list for PBXProject "DigiTurk Task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBFD28F62B31ACD3001320E9;
+			packageReferences = (
+				CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CBFD295F2B31CCBE001320E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = CBFD29002B31ACD3001320E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBFD28FE2B31ACD3001320E9 /* DigiTurk Task */,
+				CBFD29142B31ACD3001320E9 /* DigiTurk TaskTests */,
+				CBFD291E2B31ACD3001320E9 /* DigiTurk TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBFD28FD2B31ACD3001320E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFD290F2B31ACD3001320E9 /* LaunchScreen.storyboard in Resources */,
+				CBFD290C2B31ACD3001320E9 /* Assets.xcassets in Resources */,
+				CBFD290A2B31ACD3001320E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD29132B31ACD3001320E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD291D2B31ACD3001320E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBFD28FB2B31ACD3001320E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFD294A2B31B71D001320E9 /* GenreResult.swift in Sources */,
+				CBFD29402B31B09B001320E9 /* MainPresenter.swift in Sources */,
+				CBFD29072B31ACD3001320E9 /* MainViewController.swift in Sources */,
+				CBFD29522B31B8CD001320E9 /* ProgramResponse.swift in Sources */,
+				CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */,
+				CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */,
+				CBFD294C2B31B7C1001320E9 /* ProgramResult.swift in Sources */,
+				CBFD295B2B31BCD8001320E9 /* DigiTurkRequest.swift in Sources */,
+				CBFD29462B31B0EE001320E9 /* MainModels.swift in Sources */,
+				CBFD29582B31BB91001320E9 /* ProgramRequest.swift in Sources */,
+				CBFD295E2B31C9D7001320E9 /* MainWorker.swift in Sources */,
+				CBFD29442B31B0BB001320E9 /* MainConfigurator.swift in Sources */,
+				CBFD293E2B31B079001320E9 /* MainInteractor.swift in Sources */,
+				CBFD29422B31B0AA001320E9 /* MainRouter.swift in Sources */,
+				CBFD29502B31B8A0001320E9 /* GenreResponse.swift in Sources */,
+				CBFD29552B31BB19001320E9 /* GenreRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD29112B31ACD3001320E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFD291A2B31ACD3001320E9 /* DigiTurk_TaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFD291B2B31ACD3001320E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFD29262B31ACD3001320E9 /* DigiTurk_TaskUITestsLaunchTests.swift in Sources */,
+				CBFD29242B31ACD3001320E9 /* DigiTurk_TaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBFD29172B31ACD3001320E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBFD28FE2B31ACD3001320E9 /* DigiTurk Task */;
+			targetProxy = CBFD29162B31ACD3001320E9 /* PBXContainerItemProxy */;
+		};
+		CBFD29212B31ACD3001320E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBFD28FE2B31ACD3001320E9 /* DigiTurk Task */;
+			targetProxy = CBFD29202B31ACD3001320E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBFD29082B31ACD3001320E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBFD29092B31ACD3001320E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBFD290D2B31ACD3001320E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBFD290E2B31ACD3001320E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBFD29272B31ACD3001320E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBFD29282B31ACD3001320E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBFD292A2B31ACD3001320E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigiTurk Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBFD292B2B31ACD3001320E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigiTurk Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBFD292D2B31ACD3001320E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigiTurk Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigiTurk Task";
+			};
+			name = Debug;
+		};
+		CBFD292E2B31ACD3001320E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigiTurk Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigiTurk Task";
+			};
+			name = Release;
+		};
+		CBFD29302B31ACD3001320E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigiTurk Task";
+			};
+			name = Debug;
+		};
+		CBFD29312B31ACD3001320E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6AW93VQMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdalati.DigiTurk-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigiTurk Task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBFD28FA2B31ACD3001320E9 /* Build configuration list for PBXProject "DigiTurk Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFD29272B31ACD3001320E9 /* Debug */,
+				CBFD29282B31ACD3001320E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFD29292B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFD292A2B31ACD3001320E9 /* Debug */,
+				CBFD292B2B31ACD3001320E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFD292C2B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFD292D2B31ACD3001320E9 /* Debug */,
+				CBFD292E2B31ACD3001320E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFD292F2B31ACD3001320E9 /* Build configuration list for PBXNativeTarget "DigiTurk TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFD29302B31ACD3001320E9 /* Debug */,
+				CBFD29312B31ACD3001320E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CBFD295F2B31CCBE001320E9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBFD29382B31B00E001320E9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CBFD29602B31CCBE001320E9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFD295F2B31CCBE001320E9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CBFD28F72B31ACD3001320E9 /* Project object */;
+}
