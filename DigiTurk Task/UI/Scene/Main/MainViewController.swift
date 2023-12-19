@@ -13,8 +13,6 @@ import SnapKit
 protocol MainViewLogic {
     
     func displayInitializeResult(viewModel: MainModels.Initialize.ViewModel)
-    func displayReloadResult(viewModel: MainModels.Reload.ViewModel)
-    func displayFinalizeResult(viewModel: MainModels.Finilize.ViewModel)
 }
 
 // MARK: - MainViewController
@@ -44,12 +42,25 @@ class MainViewController: UIViewController {
         return label
     }()
     
+    private lazy var pageIndicator: UIPageControl = {
+        let pageControl = UIPageControl(frame: .zero)
+        pageControl.hidesForSinglePage = true
+        pageControl.currentPageIndicatorTintColor = .blue
+        pageControl.pageIndicatorTintColor = .black
+        view.addSubview(pageControl)
+        pageControl.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(labelTitle.snp.bottom).inset(12)
+        }
+        return pageControl
+    }()
+    
     private lazy var viewPagerContainer: UIView = {
         
         let containerView = UIView(frame: .zero)
         view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(labelTitle.snp.bottom).offset(18)
+            make.top.equalTo(pageIndicator.snp.bottom)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
@@ -71,19 +82,6 @@ class MainViewController: UIViewController {
         pageViewController.delegate = self
         pageViewController.dataSource = self
         return pageViewController
-    }()
-    
-    private lazy var pageIndicator: UIPageControl = {
-        let pageControl = UIPageControl(frame: .zero)
-        pageControl.hidesForSinglePage = true
-        pageControl.currentPageIndicatorTintColor = .blue
-        pageControl.pageIndicatorTintColor = .black
-        view.addSubview(pageControl)
-        pageControl.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(24)
-        }
-        return pageControl
     }()
     
     // MARK: Variables
@@ -115,26 +113,16 @@ class MainViewController: UIViewController {
 }
 
 // MARK: - MainViewLogic
-
 extension MainViewController: MainViewLogic {
     
     func displayInitializeResult(viewModel: MainModels.Initialize.ViewModel) {
         
         self.genrePages = viewModel.pages
     }
-    
-    func displayReloadResult(viewModel: MainModels.Reload.ViewModel) {
-        
-    }
-    
-    func displayFinalizeResult(viewModel: MainModels.Finilize.ViewModel) {
-        
-    }
 }
 
 
 // MARK: - UIPageViewControllerDelegate, UIPageViewControllerDelegate
-
 extension MainViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {

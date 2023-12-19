@@ -29,6 +29,7 @@ class GenreDetailsInteractor: GenreDetailsDatasource {
     // MARK: Variables
     private var genre: GenreResult
     private var currentPage: Int = 1
+    private var numberOfPages: Int = 1
     private var results: [ProgramResult] = []
     init(
         presenter: GenreDetailsPresnterLogic,
@@ -50,13 +51,46 @@ extension GenreDetailsInteractor: GenreDetailsInteractorLogic {
             guard error == nil else {
                 return
             }
+            if let receivedPage = response?.page {
+                self?.currentPage = receivedPage
+            }
+            self?.numberOfPages = response?.totalPages ?? 1
             self?.results = response?.results ?? []
-            self?.presenter.presentInitialize(response: GenreDetailsModels.Initialize.Response(programs: self?.results ?? []))
+            self?.presenter.presentInitialize(
+                response: GenreDetailsModels.Initialize.Response(
+                    programs: self?.results ?? []
+                )
+            )
         }
     }
     
     func reload(request: GenreDetailsModels.Reload.Request) {
         
+        guard currentPage <= numberOfPages else {
+            return
+        }
+        presenter.presentReload(
+            response: GenreDetailsModels.Reload.Response(
+                isLoading: true,
+                programs: results
+            )
+        )
+        
+        worker.getGenreItems(for: genre.id ?? 0, page: currentPage + 1) { [weak self] response, error in
+            guard error == nil else {
+                return
+            }
+            if let receivedPage = response?.page {
+                self?.currentPage = receivedPage
+            }
+            self?.results.append(contentsOf: response?.results ?? [])
+            self?.presenter.presentReload(
+                response: GenreDetailsModels.Reload.Response(
+                    isLoading: false,
+                    programs: self?.results ?? []
+                )
+            )
+        }
     }
 }
 

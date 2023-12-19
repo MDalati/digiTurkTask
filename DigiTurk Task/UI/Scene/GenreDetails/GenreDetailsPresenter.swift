@@ -45,5 +45,18 @@ extension GenreDetailsPresnter: GenreDetailsPresnterLogic {
     
     func presentReload(response: GenreDetailsModels.Reload.Response) {
         
+        let presentations = response.programs.map {
+            ProgramCellPresentation(
+                id: $0.id,
+                title: $0.title,
+                imageUrl: $0.coverImageURL
+            )
+        }
+        view.displayReloadResult(
+            viewModel: GenreDetailsModels.Reload.ViewModel(
+                isLoading: response.isLoading,
+                presentations: presentations
+            )
+        )
     }
 }

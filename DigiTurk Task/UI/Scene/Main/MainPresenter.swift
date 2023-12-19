@@ -7,13 +7,13 @@
 
 import Foundation
 
+// MARK: - MainPresenterLogic
 protocol MainPresenterLogic {
     
     func presentInitializeResult(response: MainModels.Initialize.Response)
-    func presentReloadResult(response: MainModels.Reload.Response)
-    func presentFinalizeResult(response: MainModels.Finilize.Response)
 }
 
+// MARK: - MainPresenter
 class MainPresenter {
     
     var view: MainViewLogic
@@ -24,7 +24,6 @@ class MainPresenter {
 }
 
 // MARK: - MainPresenterLogic
-
 extension MainPresenter: MainPresenterLogic {
     
     func presentInitializeResult(response: MainModels.Initialize.Response) {
@@ -36,13 +35,5 @@ extension MainPresenter: MainPresenterLogic {
             )
         }
         view.displayInitializeResult(viewModel: MainModels.Initialize.ViewModel(pages: genrePages))
-    }
-    
-    func presentReloadResult(response: MainModels.Reload.Response) {
-        
-    }
-    
-    func presentFinalizeResult(response: MainModels.Finilize.Response) {
-        
     }
 }

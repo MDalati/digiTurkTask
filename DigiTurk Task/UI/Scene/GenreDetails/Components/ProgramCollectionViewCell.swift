@@ -56,9 +56,9 @@ class ProgramCollectionViewCell: UICollectionViewCell {
     
     // MARK: Lifecycle
     
-    override func awakeFromNib() {
+    override func didMoveToSuperview() {
         
-        super.awakeFromNib()
+        super.didMoveToSuperview()
         backgroundColor = .clear
         contentView.backgroundColor = .clear
     }

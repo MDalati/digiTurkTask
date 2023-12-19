@@ -19,6 +19,14 @@
 		CB5FBF972B32044200B8A246 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBF962B32044200B8A246 /* UIView.swift */; };
 		CB5FBF992B320E3B00B8A246 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBF982B320E3B00B8A246 /* UICollectionView.swift */; };
 		CB5FBF9B2B32122F00B8A246 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBF9A2B32122F00B8A246 /* UIImageView.swift */; };
+		CB5FBF9E2B323EA500B8A246 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBF9D2B323EA500B8A246 /* PlayerViewController.swift */; };
+		CB5FBFA02B323F0700B8A246 /* PlayerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBF9F2B323F0700B8A246 /* PlayerModels.swift */; };
+		CB5FBFA22B323FA000B8A246 /* PlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFA12B323FA000B8A246 /* PlayerInteractor.swift */; };
+		CB5FBFA42B3240C300B8A246 /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFA32B3240C300B8A246 /* PlayerPresenter.swift */; };
+		CB5FBFA62B3241A300B8A246 /* PlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFA52B3241A300B8A246 /* PlayerRouter.swift */; };
+		CB5FBFA82B3241EB00B8A246 /* PlayerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */; };
+		CB5FBFAC2B3248A200B8A246 /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFAB2B3248A200B8A246 /* LoadingFooterView.swift */; };
+		CB5FBFAE2B324AFD00B8A246 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */; };
 		CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29022B31ACD3001320E9 /* AppDelegate.swift */; };
 		CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */; };
 		CBFD29072B31ACD3001320E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29062B31ACD3001320E9 /* MainViewController.swift */; };
@@ -75,6 +83,14 @@
 		CB5FBF962B32044200B8A246 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CB5FBF982B320E3B00B8A246 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		CB5FBF9A2B32122F00B8A246 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		CB5FBF9D2B323EA500B8A246 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		CB5FBF9F2B323F0700B8A246 /* PlayerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModels.swift; sourceTree = "<group>"; };
+		CB5FBFA12B323FA000B8A246 /* PlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInteractor.swift; sourceTree = "<group>"; };
+		CB5FBFA32B3240C300B8A246 /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
+		CB5FBFA52B3241A300B8A246 /* PlayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRouter.swift; sourceTree = "<group>"; };
+		CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigurator.swift; sourceTree = "<group>"; };
+		CB5FBFAB2B3248A200B8A246 /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
+		CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigiTurk Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFD29022B31ACD3001320E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CB5FBF932B32038800B8A246 /* ProgramCollectionViewCell.swift */,
+				CB5FBFAB2B3248A200B8A246 /* LoadingFooterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,8 +177,22 @@
 				CB5FBF962B32044200B8A246 /* UIView.swift */,
 				CB5FBF982B320E3B00B8A246 /* UICollectionView.swift */,
 				CB5FBF9A2B32122F00B8A246 /* UIImageView.swift */,
+				CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB5FBF9C2B323E8300B8A246 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FBF9F2B323F0700B8A246 /* PlayerModels.swift */,
+				CB5FBF9D2B323EA500B8A246 /* PlayerViewController.swift */,
+				CB5FBFA12B323FA000B8A246 /* PlayerInteractor.swift */,
+				CB5FBFA32B3240C300B8A246 /* PlayerPresenter.swift */,
+				CB5FBFA52B3241A300B8A246 /* PlayerRouter.swift */,
+				CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		CBFD28F62B31ACD3001320E9 = {
@@ -219,6 +250,7 @@
 		CBFD293A2B31B044001320E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CB5FBF9C2B323E8300B8A246 /* Player */,
 				CBFD29622B31E9CF001320E9 /* GenreDetails */,
 				CBFD293B2B31B04B001320E9 /* Main */,
 			);
@@ -464,18 +496,26 @@
 				CB5FBF7D2B31EB6C00B8A246 /* GenreDetailsInteractor.swift in Sources */,
 				CB5FBF832B31EBA100B8A246 /* GenreDetailsViewController.swift in Sources */,
 				CBFD29522B31B8CD001320E9 /* ProgramsListResponse.swift in Sources */,
+				CB5FBFA22B323FA000B8A246 /* PlayerInteractor.swift in Sources */,
+				CB5FBF9E2B323EA500B8A246 /* PlayerViewController.swift in Sources */,
 				CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */,
 				CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */,
 				CB5FBF942B32038800B8A246 /* ProgramCollectionViewCell.swift in Sources */,
 				CB5FBF812B31EB8800B8A246 /* GenreDetailsRouter.swift in Sources */,
+				CB5FBFAC2B3248A200B8A246 /* LoadingFooterView.swift in Sources */,
 				CBFD294C2B31B7C1001320E9 /* ProgramResult.swift in Sources */,
 				CB5FBF992B320E3B00B8A246 /* UICollectionView.swift in Sources */,
 				CB5FBF9B2B32122F00B8A246 /* UIImageView.swift in Sources */,
 				CBFD295B2B31BCD8001320E9 /* DigiTurkRequest.swift in Sources */,
 				CBFD29462B31B0EE001320E9 /* MainModels.swift in Sources */,
 				CB5FBF8C2B31EFA600B8A246 /* GenreDetailsWorker.swift in Sources */,
+				CB5FBFA02B323F0700B8A246 /* PlayerModels.swift in Sources */,
+				CB5FBFAE2B324AFD00B8A246 /* UIScrollView.swift in Sources */,
 				CB5FBF7F2B31EB7C00B8A246 /* GenreDetailsPresenter.swift in Sources */,
+				CB5FBFA82B3241EB00B8A246 /* PlayerConfigurator.swift in Sources */,
+				CB5FBFA42B3240C300B8A246 /* PlayerPresenter.swift in Sources */,
 				CBFD29582B31BB91001320E9 /* ProgramRequest.swift in Sources */,
+				CB5FBFA62B3241A300B8A246 /* PlayerRouter.swift in Sources */,
 				CB5FBF912B31FAF500B8A246 /* Collection.swift in Sources */,
 				CBFD295E2B31C9D7001320E9 /* MainWorker.swift in Sources */,
 				CBFD29442B31B0BB001320E9 /* MainConfigurator.swift in Sources */,

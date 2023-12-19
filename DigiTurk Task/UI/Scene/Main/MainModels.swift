@@ -28,22 +28,4 @@ enum MainModels {
             var pages: [GenrePageModel]
         }
     }
-    
-    enum Reload {
-        
-        struct Request { }
-        
-        struct Response { }
-        
-        struct ViewModel { }
-    }
-    
-    enum Finilize {
-        
-        struct Request { }
-        
-        struct Response { }
-        
-        struct ViewModel { }
-    }
 }

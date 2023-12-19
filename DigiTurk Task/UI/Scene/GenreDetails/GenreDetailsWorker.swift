@@ -7,11 +7,13 @@
 
 import Foundation
 
+// MARK: - GenreDetailsWorkerLogic
 protocol GenreDetailsWorkerLogic {
     
     func getGenreItems(for genreId: Int, page: Int, completion: @escaping (ProgramsListResponse?, Error?) -> Void)
 }
 
+// MARK: - GenreDetailsWorker
 class GenreDetailsWorker: GenreDetailsWorkerLogic {
     
     func getGenreItems(

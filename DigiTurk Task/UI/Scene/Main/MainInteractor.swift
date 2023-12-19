@@ -11,8 +11,6 @@ import Foundation
 protocol MainInteractorLogic {
     
     func initialize(request: MainModels.Initialize.Request)
-    func reload(request: MainModels.Reload.Request)
-    func finalize(request: MainModels.Finilize.Request)
 }
 
 // MARK: - MainDatasource
@@ -51,13 +49,5 @@ extension MainInteractor: MainInteractorLogic {
                 response: MainModels.Initialize.Response(genresList: genres)
             )
         }
-    }
-    
-    func reload(request: MainModels.Reload.Request) {
-        
-    }
-    
-    func finalize(request: MainModels.Finilize.Request) {
-        
     }
 }
