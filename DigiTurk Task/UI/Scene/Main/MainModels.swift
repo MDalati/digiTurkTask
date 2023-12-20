@@ -26,6 +26,7 @@ enum MainModels {
         struct ViewModel {
             
             var pages: [GenrePageModel]
+            var capsuleListPresentations: [CapsuleCellPresentation]
         }
     }
 }

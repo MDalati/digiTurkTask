@@ -28,12 +28,26 @@ extension MainPresenter: MainPresenterLogic {
     
     func presentInitializeResult(response: MainModels.Initialize.Response) {
         
-        let genrePages: [MainModels.GenrePageModel] = response.genresList.compactMap {
-            return MainModels.GenrePageModel(
+        var genrePages: [MainModels.GenrePageModel] = []
+        var capsuleListPresentations: [CapsuleCellPresentation] = []
+        
+        response.genresList.forEach {
+            let capsulePresentation = CapsuleCellPresentation(
+                title: $0.name,
+                isSelected: false
+            )
+            capsuleListPresentations.append(capsulePresentation)
+            let genrePage = MainModels.GenrePageModel(
                 viewController: GenreDetailsConfigurator.createScene(for: $0),
                 title: $0.name
             )
+            genrePages.append(genrePage)
         }
-        view.displayInitializeResult(viewModel: MainModels.Initialize.ViewModel(pages: genrePages))
+        view.displayInitializeResult(
+            viewModel: MainModels.Initialize.ViewModel(
+                pages: genrePages,
+                capsuleListPresentations: capsuleListPresentations
+            )
+        )
     }
 }

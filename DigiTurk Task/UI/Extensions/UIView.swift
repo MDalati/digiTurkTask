@@ -13,4 +13,8 @@ extension UIView {
         
         layer.cornerRadius = radius
     }
+    
+    func roundedView() {
+        layer.cornerRadius = bounds.height/2
+    }
 }

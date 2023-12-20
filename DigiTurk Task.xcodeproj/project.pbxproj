@@ -27,6 +27,9 @@
 		CB5FBFA82B3241EB00B8A246 /* PlayerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */; };
 		CB5FBFAC2B3248A200B8A246 /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFAB2B3248A200B8A246 /* LoadingFooterView.swift */; };
 		CB5FBFAE2B324AFD00B8A246 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */; };
+		CB5FBFB22B32DB4A00B8A246 /* CapsuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFB12B32DB4A00B8A246 /* CapsuleList.swift */; };
+		CB5FBFB42B32DCB700B8A246 /* CapsuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFB32B32DCB600B8A246 /* CapsuleCollectionViewCell.swift */; };
+		CB5FBFB72B32E8EE00B8A246 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */; };
 		CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29022B31ACD3001320E9 /* AppDelegate.swift */; };
 		CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */; };
 		CBFD29072B31ACD3001320E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29062B31ACD3001320E9 /* MainViewController.swift */; };
@@ -91,6 +94,8 @@
 		CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigurator.swift; sourceTree = "<group>"; };
 		CB5FBFAB2B3248A200B8A246 /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
 		CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+		CB5FBFB12B32DB4A00B8A246 /* CapsuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleList.swift; sourceTree = "<group>"; };
+		CB5FBFB32B32DCB600B8A246 /* CapsuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigiTurk Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFD29022B31ACD3001320E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 			files = (
 				CBFD29392B31B00E001320E9 /* Alamofire in Frameworks */,
 				CBFD29612B31CCBE001320E9 /* SnapKit in Frameworks */,
+				CB5FBFB72B32E8EE00B8A246 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,23 @@
 				CB5FBFA72B3241EB00B8A246 /* PlayerConfigurator.swift */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		CB5FBFAF2B32DB1900B8A246 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FBFB02B32DB2500B8A246 /* CapsuleList */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		CB5FBFB02B32DB2500B8A246 /* CapsuleList */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FBFB12B32DB4A00B8A246 /* CapsuleList.swift */,
+				CB5FBFB32B32DCB600B8A246 /* CapsuleCollectionViewCell.swift */,
+			);
+			path = CapsuleList;
 			sourceTree = "<group>";
 		};
 		CBFD28F62B31ACD3001320E9 = {
@@ -275,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				CB5FBF952B32043300B8A246 /* Extensions */,
+				CB5FBFAF2B32DB1900B8A246 /* CustomUI */,
 				CBFD293A2B31B044001320E9 /* Scene */,
 				CBFD29082B31ACD3001320E9 /* Main.storyboard */,
 			);
@@ -369,6 +393,7 @@
 			packageProductDependencies = (
 				CBFD29382B31B00E001320E9 /* Alamofire */,
 				CBFD29602B31CCBE001320E9 /* SnapKit */,
+				CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */,
 			);
 			productName = "DigiTurk Task";
 			productReference = CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */;
@@ -445,6 +470,7 @@
 			packageReferences = (
 				CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CBFD295F2B31CCBE001320E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = CBFD29002B31ACD3001320E9 /* Products */;
 			projectDirPath = "";
@@ -506,6 +532,8 @@
 				CBFD294C2B31B7C1001320E9 /* ProgramResult.swift in Sources */,
 				CB5FBF992B320E3B00B8A246 /* UICollectionView.swift in Sources */,
 				CB5FBF9B2B32122F00B8A246 /* UIImageView.swift in Sources */,
+				CB5FBFB22B32DB4A00B8A246 /* CapsuleList.swift in Sources */,
+				CB5FBFB42B32DCB700B8A246 /* CapsuleCollectionViewCell.swift in Sources */,
 				CBFD295B2B31BCD8001320E9 /* DigiTurkRequest.swift in Sources */,
 				CBFD29462B31B0EE001320E9 /* MainModels.swift in Sources */,
 				CB5FBF8C2B31EFA600B8A246 /* GenreDetailsWorker.swift in Sources */,
@@ -870,6 +898,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -889,6 +925,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		CBFD29382B31B00E001320E9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */;

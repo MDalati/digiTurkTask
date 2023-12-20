@@ -42,17 +42,17 @@ class MainViewController: UIViewController {
         return label
     }()
     
-    private lazy var pageIndicator: UIPageControl = {
-        let pageControl = UIPageControl(frame: .zero)
-        pageControl.hidesForSinglePage = true
-        pageControl.currentPageIndicatorTintColor = .blue
-        pageControl.pageIndicatorTintColor = .black
-        view.addSubview(pageControl)
-        pageControl.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(labelTitle.snp.bottom).inset(12)
+    private lazy var capsuleList: CapsuleList = {
+        let capsuleList = CapsuleList(frame: .zero)
+        view.addSubview(capsuleList)
+        capsuleList.delegate = self
+        capsuleList.snp.makeConstraints { make in
+            make.top.equalTo(labelTitle.snp.bottom).offset(12)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(56)
         }
-        return pageControl
+        return capsuleList
     }()
     
     private lazy var viewPagerContainer: UIView = {
@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
         let containerView = UIView(frame: .zero)
         view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(pageIndicator.snp.bottom)
+            make.top.equalTo(capsuleList.snp.bottom)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
@@ -107,8 +107,6 @@ class MainViewController: UIViewController {
         }
         pageViewController.setViewControllers(initViewControllers, direction: .forward, animated: false)
         labelTitle.text = genrePages.first?.title
-        pageIndicator.numberOfPages = genrePages.count
-        pageIndicator.currentPage = 0
     }
 }
 
@@ -118,6 +116,8 @@ extension MainViewController: MainViewLogic {
     func displayInitializeResult(viewModel: MainModels.Initialize.ViewModel) {
         
         self.genrePages = viewModel.pages
+        capsuleList.cellPresentations = viewModel.capsuleListPresentations
+        capsuleList.selectedIndex = 0
     }
 }
 
@@ -145,11 +145,34 @@ extension MainViewController: UIPageViewControllerDelegate, UIPageViewController
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        guard let currentIndex = genrePages.firstIndex(where: {$0.viewController == pageViewController.viewControllers?.first}) else {
+        guard let currentIndex = getCurrentPageIndex() else {
             return
         }
-        labelTitle.text = genrePages[safe: currentIndex]?.title
-        pageIndicator.currentPage = currentIndex
+        updateSelectedPage(index: currentIndex)
     }
     
+    private func updateSelectedPage(index: Int) {
+        
+        labelTitle.text = genrePages[safe: index]?.title
+        capsuleList.selectedIndex = index
+    }
+    
+    private func getCurrentPageIndex() -> Int? {
+        
+        return genrePages.firstIndex(where: {$0.viewController == pageViewController.viewControllers?.first})
+    }
+}
+
+// MARK: - CapsuleListDelegate
+extension MainViewController: CapsuleListDelegate {
+    
+    func capsuleList(_ sender: CapsuleList, didSelectItemAt index: Int) {
+        
+        guard let currentIndex = getCurrentPageIndex(), let targetPage = genrePages[safe: index] else {
+            return
+        }
+        let direction: UIPageViewController.NavigationDirection = currentIndex < index ? .forward : .reverse
+        pageViewController.setViewControllers([targetPage.viewController], direction: direction, animated: true)
+        updateSelectedPage(index: index)
+    }
 }

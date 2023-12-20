@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 extension UIImageView {
     
@@ -17,12 +18,11 @@ extension UIImageView {
             return
         }
         AF.request(url, method: .get)
-            .response
+            .responseImage
         { response in
-            guard let imageData = response.data else {
-                return
+            if case .success(let image) = response.result {
+                self.image = image
             }
-            self.image = UIImage(data: imageData, scale:1)
         }
     }
 }
