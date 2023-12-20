@@ -46,17 +46,18 @@ extension GenreDetailsPresnter: GenreDetailsPresnterLogic {
     
     func presentReload(response: GenreDetailsModels.Reload.Response) {
         
-        let presentations = response.newPagePrograms.map {
-            ProgramCellPresentation(
-                id: $0.id,
-                title: $0.title,
-                imageUrl: $0.coverImageURL
-            )
-        }
+        var presentations: [ProgramCellPresentation] = []
         var insertionIndexPathes: [IndexPath] = []
         if response.insertionStartIndex > -1 {
             for index in response.insertionStartIndex ..< response.allElementsCount {
                 insertionIndexPathes.append(IndexPath(row: index, section: 0))
+            }
+            presentations = response.newPagePrograms.map {
+                ProgramCellPresentation(
+                    id: $0.id,
+                    title: $0.title,
+                    imageUrl: $0.coverImageURL
+                )
             }
         }
         view.displayReloadResult(

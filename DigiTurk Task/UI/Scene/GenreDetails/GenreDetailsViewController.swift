@@ -53,8 +53,8 @@ class GenreDetailsViewController: UICollectionViewController {
         collectionView.contentInset = collectionViewInsets
         collectionView.isPagingEnabled = false
     }
-    
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         if scrollView.reachedBottom && !isLoading {
             interactor?.reload(request: GenreDetailsModels.Reload.Request())
@@ -62,6 +62,7 @@ class GenreDetailsViewController: UICollectionViewController {
     }
 }
 
+// MARK: - GenreDetailsViewLogic
 extension GenreDetailsViewController: GenreDetailsViewLogic {
     
     func displayInitializeResult(viewModel: GenreDetailsModels.Initialize.ViewModel) {
@@ -77,7 +78,6 @@ extension GenreDetailsViewController: GenreDetailsViewLogic {
         self.presentations.append(contentsOf: viewModel.newPagePresentations)
         
         collectionView.performBatchUpdates {
-            
             collectionView.insertItems(at: viewModel.insertionIndexPathes)
         }
     }

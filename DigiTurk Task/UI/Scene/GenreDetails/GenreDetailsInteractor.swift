@@ -87,11 +87,12 @@ extension GenreDetailsInteractor: GenreDetailsInteractorLogic {
                 self?.currentPage = receivedPage
             }
             let insertionStartIndex = self?.results.count ?? -1
-            self?.results.append(contentsOf: response?.results ?? [])
+            let newPageResults: [ProgramResult] = response?.results ?? []
+            self?.results.append(contentsOf: newPageResults)
             self?.presenter.presentReload(
                 response: GenreDetailsModels.Reload.Response(
                     isLoading: false,
-                    newPagePrograms: response?.results ?? [],
+                    newPagePrograms: newPageResults,
                     insertionStartIndex: insertionStartIndex,
                     allElementsCount: self?.results.count ?? 0
                 )
