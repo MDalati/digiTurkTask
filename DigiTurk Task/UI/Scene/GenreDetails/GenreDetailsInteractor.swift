@@ -73,7 +73,9 @@ extension GenreDetailsInteractor: GenreDetailsInteractorLogic {
         presenter.presentReload(
             response: GenreDetailsModels.Reload.Response(
                 isLoading: true,
-                programs: results
+                newPagePrograms: [],
+                insertionStartIndex: -1,
+                allElementsCount: 0
             )
         )
         
@@ -84,11 +86,14 @@ extension GenreDetailsInteractor: GenreDetailsInteractorLogic {
             if let receivedPage = response?.page {
                 self?.currentPage = receivedPage
             }
+            let insertionStartIndex = self?.results.count ?? -1
             self?.results.append(contentsOf: response?.results ?? [])
             self?.presenter.presentReload(
                 response: GenreDetailsModels.Reload.Response(
                     isLoading: false,
-                    programs: self?.results ?? []
+                    newPagePrograms: response?.results ?? [],
+                    insertionStartIndex: insertionStartIndex,
+                    allElementsCount: self?.results.count ?? 0
                 )
             )
         }

@@ -28,12 +28,15 @@ enum GenreDetailsModels {
         
         struct Response {
             var isLoading: Bool
-            var programs: [ProgramResult]
+            var newPagePrograms: [ProgramResult]
+            var insertionStartIndex: Int
+            var allElementsCount: Int
         }
         
         struct ViewModel {
             var isLoading: Bool
-            var presentations: [ProgramCellPresentation]
+            var newPagePresentations: [ProgramCellPresentation]
+            var insertionIndexPathes: [IndexPath]
         }
     }
     

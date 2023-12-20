@@ -73,9 +73,13 @@ extension GenreDetailsViewController: GenreDetailsViewLogic {
     func displayReloadResult(viewModel: GenreDetailsModels.Reload.ViewModel) {
         
         self.isLoading = viewModel.isLoading
-        self.presentations = viewModel.presentations
-        let indexSet = IndexSet(integer: 0)
-        collectionView.reloadSections(indexSet)
+        let insertionStartIndex = self.presentations.count
+        self.presentations.append(contentsOf: viewModel.newPagePresentations)
+        
+        collectionView.performBatchUpdates {
+            
+            collectionView.insertItems(at: viewModel.insertionIndexPathes)
+        }
     }
     
     func displayOpenProgramResult(viewModel: GenreDetailsModels.OpenProgram.ViewModel) {
