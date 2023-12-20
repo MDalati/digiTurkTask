@@ -12,6 +12,7 @@ protocol GenreDetailsPresnterLogic {
     
     func presentInitialize(response: GenreDetailsModels.Initialize.Response)
     func presentReload(response: GenreDetailsModels.Reload.Response)
+    func presentOpenProgram(response: GenreDetailsModels.OpenProgram.Response)
 }
 
 // MARK: - GenreDetailsPresnter
@@ -56,6 +57,14 @@ extension GenreDetailsPresnter: GenreDetailsPresnterLogic {
             viewModel: GenreDetailsModels.Reload.ViewModel(
                 isLoading: response.isLoading,
                 presentations: presentations
+            )
+        )
+    }
+    
+    func presentOpenProgram(response: GenreDetailsModels.OpenProgram.Response) {
+        view.displayOpenProgramResult(
+            viewModel: GenreDetailsModels.OpenProgram.ViewModel(
+                selectedProgram: response.selectedProgram
             )
         )
     }

@@ -12,20 +12,20 @@ protocol PlayerInteractorLogic {
     func initialize(request: PlayerModels.Initialize.Request)
 }
 
-protocol PlayerDatasource {
-    
-    var itemUrl: URL? { get }
-}
+protocol PlayerDatasource { }
 
 class PlayerInteractor: PlayerDatasource {
     
-    // MARK: Datasource
-    let itemUrl = URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8")
-    
     // MARK: VIP
     var presenter: PlayerPresenterLogic
-    init(presenter: PlayerPresenterLogic) {
+    
+    // MARK: Variables
+    private var currentProgram: ProgramResult
+    private let videoURL = URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8")
+    
+    init(presenter: PlayerPresenterLogic, selectedProgram: ProgramResult) {
         self.presenter = presenter
+        self.currentProgram = selectedProgram
     }
 }
 
@@ -33,6 +33,11 @@ class PlayerInteractor: PlayerDatasource {
 extension PlayerInteractor: PlayerInteractorLogic {
     
     func initialize(request: PlayerModels.Initialize.Request) {
-        presenter.presentInitializeResult(response: PlayerModels.Initialize.Response())
+        presenter.presentInitializeResult(
+            response: PlayerModels.Initialize.Response(
+                videoURL: videoURL,
+                selectedProgram: currentProgram
+            )
+        )
     }
 }

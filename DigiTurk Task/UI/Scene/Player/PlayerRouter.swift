@@ -17,13 +17,13 @@ class PlayerRouter: PlayerRouterLogic {
 
 protocol PlayerRoutable {
     
-    func routeToPlayer(sender: UIViewController)
+    func routeToPlayer(sender: UIViewController, for result: ProgramResult)
 }
 
 extension PlayerRoutable {
     
-    func routeToPlayer(sender: UIViewController) {
-        let playerVC = PlayerConfigurator.createScene()
+    func routeToPlayer(sender: UIViewController, for result: ProgramResult) {
+        let playerVC = PlayerConfigurator.createScene(selectedProgram: result)
         sender.present(playerVC, animated: true)
     }
 }

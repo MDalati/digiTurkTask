@@ -27,11 +27,14 @@ class PlayerViewController: AVPlayerViewController {
     private lazy var labelTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = .boldSystemFont(ofSize: 18)
-        view.addSubview(label)
-        label.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
-            make.leading.greaterThanOrEqualToSuperview().inset(18)
+        label.textColor = .white
+        if let contentOverlayView = contentOverlayView {
+            contentOverlayView.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.top.equalTo(contentOverlayView.safeAreaLayoutGuide.snp.top).offset(12)
+                make.leading.greaterThanOrEqualToSuperview().inset(18)
+            }
         }
         return label
     }()
@@ -41,12 +44,12 @@ class PlayerViewController: AVPlayerViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         interactor?.initialize(request: PlayerModels.Initialize.Request())
-        startPlayer()
     }
     
-    private func startPlayer() {
-        guard  let url = datasource?.itemUrl else {
+    private func startPlayer(url: URL?) {
+        guard  let url = url else {
             return
         }
         let playerItem = AVPlayerItem(url: url)
@@ -58,5 +61,8 @@ class PlayerViewController: AVPlayerViewController {
 // MARK: - PlayerViewLogic
 extension PlayerViewController: PlayerViewLogic {
     
-    func displayInitializeResult(viewModel: PlayerModels.Initialize.ViewModel) { }
+    func displayInitializeResult(viewModel: PlayerModels.Initialize.ViewModel) {
+        startPlayer(url: viewModel.videoURL)
+        labelTitle.text = viewModel.videoTitle
+    }
 }

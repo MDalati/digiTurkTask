@@ -11,6 +11,7 @@ protocol GenreDetailsViewLogic {
     
     func displayInitializeResult(viewModel: GenreDetailsModels.Initialize.ViewModel)
     func displayReloadResult(viewModel: GenreDetailsModels.Reload.ViewModel)
+    func displayOpenProgramResult(viewModel: GenreDetailsModels.OpenProgram.ViewModel)
 }
 
 class GenreDetailsViewController: UICollectionViewController {
@@ -79,6 +80,11 @@ extension GenreDetailsViewController: GenreDetailsViewLogic {
         self.presentations = viewModel.presentations
         collectionView.collectionViewLayout.invalidateLayout()
     }
+    
+    func displayOpenProgramResult(viewModel: GenreDetailsModels.OpenProgram.ViewModel) {
+        
+        router?.routeToPlayer(sender: self, for: viewModel.selectedProgram)
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDatasource, UICollectionViewDelegateFlowLayout
@@ -109,7 +115,7 @@ extension GenreDetailsViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router?.routeToPlayer(sender: self)
+        interactor?.openProgram(request: GenreDetailsModels.OpenProgram.Request(index: indexPath.row))
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

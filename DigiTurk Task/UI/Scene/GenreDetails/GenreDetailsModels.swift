@@ -37,12 +37,18 @@ enum GenreDetailsModels {
         }
     }
     
-    enum Finilize {
+    enum OpenProgram {
         
-        struct Request { }
+        struct Request {
+            var index: Int
+        }
         
-        struct Response { }
+        struct Response {
+            var selectedProgram: ProgramResult
+        }
         
-        struct ViewModel { }
+        struct ViewModel {
+            var selectedProgram: ProgramResult
+        }
     }
 }

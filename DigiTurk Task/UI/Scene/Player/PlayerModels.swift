@@ -13,8 +13,14 @@ enum PlayerModels {
         
         struct Request { }
         
-        struct Response { }
+        struct Response {
+            var videoURL: URL?
+            var selectedProgram: ProgramResult
+        }
         
-        struct ViewModel { }
+        struct ViewModel {
+            var videoURL: URL?
+            var videoTitle: String?
+        }
     }
 }

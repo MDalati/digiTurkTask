@@ -25,6 +25,11 @@ class PlayerPresenter {
 extension PlayerPresenter: PlayerPresenterLogic {
     func presentInitializeResult(response: PlayerModels.Initialize.Response) {
         
-        view.displayInitializeResult(viewModel: PlayerModels.Initialize.ViewModel())
+        view.displayInitializeResult(
+            viewModel: PlayerModels.Initialize.ViewModel(
+                videoURL: response.videoURL,
+                videoTitle: response.selectedProgram.title
+            )
+        )
     }
 }

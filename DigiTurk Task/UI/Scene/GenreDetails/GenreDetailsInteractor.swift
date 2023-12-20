@@ -12,6 +12,7 @@ protocol GenreDetailsInteractorLogic {
     
     func initialize(request: GenreDetailsModels.Initialize.Request)
     func reload(request: GenreDetailsModels.Reload.Request)
+    func openProgram(request: GenreDetailsModels.OpenProgram.Request)
 }
 
 // MARK: - GenreDetailsDatasource
@@ -91,6 +92,18 @@ extension GenreDetailsInteractor: GenreDetailsInteractorLogic {
                 )
             )
         }
+    }
+    
+    func openProgram(request: GenreDetailsModels.OpenProgram.Request) {
+        
+        guard let selectedProgram = results[safe: request.index] else {
+            return
+        }
+        presenter.presentOpenProgram(
+            response: GenreDetailsModels.OpenProgram.Response(
+                selectedProgram: selectedProgram
+            )
+        )
     }
 }
 
