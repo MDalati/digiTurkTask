@@ -29,7 +29,7 @@
 		CB5FBFAE2B324AFD00B8A246 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFAD2B324AFD00B8A246 /* UIScrollView.swift */; };
 		CB5FBFB22B32DB4A00B8A246 /* CapsuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFB12B32DB4A00B8A246 /* CapsuleList.swift */; };
 		CB5FBFB42B32DCB700B8A246 /* CapsuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FBFB32B32DCB600B8A246 /* CapsuleCollectionViewCell.swift */; };
-		CB5FBFB72B32E8EE00B8A246 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */; };
+		CB5FBFBA2B32EF4700B8A246 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB5FBFB92B32EF4700B8A246 /* SDWebImage */; };
 		CBFD29032B31ACD3001320E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29022B31ACD3001320E9 /* AppDelegate.swift */; };
 		CBFD29052B31ACD3001320E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29042B31ACD3001320E9 /* SceneDelegate.swift */; };
 		CBFD29072B31ACD3001320E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD29062B31ACD3001320E9 /* MainViewController.swift */; };
@@ -129,9 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5FBFBA2B32EF4700B8A246 /* SDWebImage in Frameworks */,
 				CBFD29392B31B00E001320E9 /* Alamofire in Frameworks */,
 				CBFD29612B31CCBE001320E9 /* SnapKit in Frameworks */,
-				CB5FBFB72B32E8EE00B8A246 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 			packageProductDependencies = (
 				CBFD29382B31B00E001320E9 /* Alamofire */,
 				CBFD29602B31CCBE001320E9 /* SnapKit */,
-				CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */,
+				CB5FBFB92B32EF4700B8A246 /* SDWebImage */,
 			);
 			productName = "DigiTurk Task";
 			productReference = CBFD28FF2B31ACD3001320E9 /* DigiTurk Task.app */;
@@ -470,7 +470,7 @@
 			packageReferences = (
 				CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CBFD295F2B31CCBE001320E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CB5FBFB82B32EF4700B8A246 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = CBFD29002B31ACD3001320E9 /* Products */;
 			projectDirPath = "";
@@ -898,12 +898,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+		CB5FBFB82B32EF4700B8A246 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 		CBFD29372B31B00E001320E9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -925,10 +925,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CB5FBFB62B32E8EE00B8A246 /* AlamofireImage */ = {
+		CB5FBFB92B32EF4700B8A246 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CB5FBFB52B32E8EE00B8A246 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
-			productName = AlamofireImage;
+			package = CB5FBFB82B32EF4700B8A246 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		CBFD29382B31B00E001320E9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

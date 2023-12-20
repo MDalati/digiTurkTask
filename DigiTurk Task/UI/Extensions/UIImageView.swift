@@ -6,23 +6,17 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
+import SDWebImage
 
 extension UIImageView {
     
     func loadImage(from url: String?) {
         
-        image = UIImage(named: "placeholder")
-        guard let url = url else {
+        sd_imageTransition = .fade
+        let placeholder = UIImage(named: "placeholder")
+        guard let urlString = url else {
             return
         }
-        AF.request(url, method: .get)
-            .responseImage
-        { response in
-            if case .success(let image) = response.result {
-                self.image = image
-            }
-        }
+        sd_setImage(with: URL(string: urlString), placeholderImage: placeholder)
     }
 }

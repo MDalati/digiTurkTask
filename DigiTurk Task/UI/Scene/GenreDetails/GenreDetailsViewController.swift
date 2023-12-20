@@ -27,12 +27,7 @@ class GenreDetailsViewController: UICollectionViewController {
     private let cellSpacing: CGFloat = 16
     private let collectionViewInsets = UIEdgeInsets(top: 18, left: 18, bottom: 56, right: 18)
     private let numberOfItemsInRow: CGFloat = 2
-    private var presentations: [ProgramCellPresentation] = [] {
-        didSet {
-            collectionView.setNeedsLayout()
-            collectionView.reloadData()
-        }
-    }
+    private var presentations: [ProgramCellPresentation] = []
     private var isLoading: Bool = false
     
     // MARK: Lifecycle
@@ -72,13 +67,15 @@ extension GenreDetailsViewController: GenreDetailsViewLogic {
     func displayInitializeResult(viewModel: GenreDetailsModels.Initialize.ViewModel) {
         
         self.presentations = viewModel.presentations
+        collectionView.reloadData()
     }
     
     func displayReloadResult(viewModel: GenreDetailsModels.Reload.ViewModel) {
         
         self.isLoading = viewModel.isLoading
         self.presentations = viewModel.presentations
-        collectionView.collectionViewLayout.invalidateLayout()
+        let indexSet = IndexSet(integer: 0)
+        collectionView.reloadSections(indexSet)
     }
     
     func displayOpenProgramResult(viewModel: GenreDetailsModels.OpenProgram.ViewModel) {
